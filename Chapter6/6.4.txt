@@ -1,0 +1,4 @@
+
+if n are the number of persons then it will take n days to get rid of all the blue colored eyes men as on the nth day only  they will realize that they are one of the n that needs to be gone.
+
+Therefore, if c men have blue eyes, it will take c nights for the blue-eyed men to leave. All will leave on the same night.

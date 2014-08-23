@@ -1,0 +1,13 @@
+
+If we took one pill from Bottle #1 and two pills from Bottle #2, what would the scale show? It depends. If Bottle #1 were the heavy bottle, we would get 3.1 grams. If Bottle #2 were the heavy bottle, we would get 3.2 grams. And that is the trick to this problem.
+
+We can generalize this to the full solution: 
+take one pill from Bottle #1,
+two pills from Bottle #2,
+three pills from Bottle #3, and so on. 
+Weigh this mix of pills. If all pills were one gram each, thes cale would read 210grams(1 + 2+...+20 = 20* 21/2 = 210).
+Any "overage" must come from the extra 0.1 gram pills.
+
+This formula will tell you the bottle number: (weight - 210 grams) / 0.1 grams.
+
+So, if the set of pills weighed 211.3 grams,then Bottle #13 would have the heavy pills.

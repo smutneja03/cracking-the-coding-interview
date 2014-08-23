@@ -1,0 +1,28 @@
+
+Building of 100 floors
+
+Find the floor from and above which the egg will break
+
+Number of drops in the Worst Case
+
+Lets do an incremental traversal by the counter of 10 i.e drop from 10 and then 20 and so on
+
+1
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Start Binary Search from here till the 100th. As chances are it will be in between only
+
+95
+97
+99
+100
+
+Where each of the number represent level from which egg is dropped
+

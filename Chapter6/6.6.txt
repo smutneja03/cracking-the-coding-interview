@@ -1,0 +1,19 @@
+
+ On each pass i, the man toggles every ith locker
+
+ Need to check which locker is open
+
+ A total of 100 lockers are present
+
+ Solution::-
+
+ A door n is toggled once for each factor of n, including itself and 1. That is, door 15 is toggled on rounds 1,3,5, and 15.
+
+ A door is left open if the number of factors (which we will call x) is odd
+
+ The value x is odd if n is a perfect square.
+
+There are 10 perfect squares. 
+You could count them (1,4,9,16,25,36,49,64,81,100), or you could simply realize that you can take the numbers 1 through 10 and square them:
+1*1, 2*2, 3*3, ..., 10*10 
+sTherefore, there are 10 lockers open at the end of this process.
