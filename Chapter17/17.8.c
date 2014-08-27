@@ -28,7 +28,7 @@ int kadane_algorithm(int *array, int size){
 
 int main(){
 
-	int array[] = { 2, -8, 3, -2, 4, -10};
+	int array[] = { 1, -3, 4, -2, -1, 6};
 
 	int size = sizeof(array)/sizeof(array[0]);
 
