@@ -1,0 +1,52 @@
+
+Solution: SingleQuery
+
+In this case, we simply go through the book, word by word, and count the number of times that a word appears.This will take 0(n) time. We know we can't do better than that since we must look at every word in the book.
+
+
+Solution: Repetitive Queries
+
+If we're doing the operation repeatedly, then we can probably afford to take some time and extra memory to do pre-processing on the book. We can create a hash table which maps from a word to its frequency. The frequency of any word can be easily looked up in 0(1) time.The code forthis is below.
+
+Hashtable<String, Integers setupDictionary(String[] book) {
+	
+	Hashtable<String, Integers table = newHashtable<String, Integer>();
+	
+	for (String word : book) { 
+	
+		word = word.toLowerCaseQ;
+	
+		if (word.trimQ != "") {
+	
+			if (!table.containsKey(word)){
+				table.put(word, 0)
+	
+			}
+	
+			table.put(word, table.get(word) + 1);
+		}
+	
+	}
+	
+	return table;
+
+}
+
+int getFrequency(Hashtable<String, Integers table, String word) {
+
+	if (table == null | word == null) 
+		return -1;
+	
+	word = word.toLowerCaseQ;
+	
+	if (table.containsKey(word)) {
+	
+		return table.get(word);
+	
+	}
+	
+	return 0;
+
+}
+
+
