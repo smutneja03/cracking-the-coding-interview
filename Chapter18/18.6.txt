@@ -1,0 +1,6 @@
+
+We first create a max heap (largest element at the top) for the first million numbers.
+
+Then, we traverse through the list. On each element, we insert it into the list and delete the largest element.
+
+At the end of the traversal, we will have a heap containing the smallest one million numbers. This algorithm is 0(n log(m)), where m is the number of values we are looking for.
