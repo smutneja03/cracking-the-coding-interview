@@ -30,7 +30,7 @@ void print_image(unsigned int const *image, int row, int col){
 	}
 }
 
-void swap(unsigned int *a, int *b){
+void swap(unsigned int *a, unsigned int *b){
 
 	int temp = *a;
 	*a = *b;
@@ -40,7 +40,7 @@ void swap(unsigned int *a, int *b){
 void get_transpose(unsigned int *pdest, int rows, int columns){
 
 	int size = rows*columns-1;
-	int t; //holds element to be replaced
+	unsigned int t; //holds element to be replaced
 	int next;
 	int cycle_begin;
 	int i;
@@ -70,6 +70,24 @@ void get_transpose(unsigned int *pdest, int rows, int columns){
 
 }
 
+void reverse_col(unsigned int *pdest, int rows, int columns){
+
+	int r, c;
+
+	for(c=0;c<columns;c++){
+
+		int top = 0;
+		int end = rows-1;
+
+		while(top < end){
+
+			swap(pdest + top * columns + c, pdest + end*columns + c);
+			top++;
+			end--;
+		}
+	}
+}
+
 int main(){
 
 	unsigned int image[][4] = {
@@ -88,7 +106,7 @@ int main(){
 
 	rotate_image(pdest, psource, m, n);
 
-	printf("Image after rotating is\n");
+	printf("\nImage after rotating is\n");
 
 	print_image(pdest, n, m);
 
@@ -98,7 +116,25 @@ int main(){
 
 	get_transpose(pdest, n, m);
 
+	printf("\n");
+	printf("Transpose of Matrix is \n");
 	print_image(pdest, m, n);
+
+	/*
+	For +90 degree rotation 
+	Transpose the matrix then reverse each row
+
+	For -90 degree rotation 
+	Transpose the matrix then reverse each column
+	*/
+
+	printf("\n");
+	printf("Transforming to Original Matrix we get\n");
+
+	reverse_col(pdest, m, n);
+
+	print_image(pdest, m, n);
+
 
 	return 0;
 }
